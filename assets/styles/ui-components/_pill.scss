@@ -1,0 +1,35 @@
+.pill {
+    border-width: 1px !important;
+    background-color: $primary;
+    color: $primary-invert;
+    font-size: 1.1rem !important;
+    letter-spacing: .06rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-weight: $weight-normal !important;
+    border: 1px solid $primary-invert;
+    outline-color: $primary-invert !important;
+
+    .icon {
+        fill: currentColor !important;
+        color: inherit !important;
+    }
+
+    &:not(span) {
+        &:hover,
+        &:focus {
+            border-color: $primary-invert !important;
+        }
+    }
+
+    &.is-active,
+    &.is-primary-invert {
+        &:not(span) {
+            &:hover,
+            &:focus {
+                background-color: $primary-invert !important;
+                color: $primary !important;
+            }
+        }
+    }
+}

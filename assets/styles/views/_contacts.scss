@@ -1,0 +1,14 @@
+.page-template-page-contacts,
+.page-template-page-materials {
+    .main-content {
+        input[type="text"] {
+            border-color: $color-milavida-grey !important;
+        }
+
+        button[type="submit"] {
+            .icon {
+                display: inline-block !important
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.page-template-page-events-search,
+.page-template-page-events-calendar {
+    h1 {
+        margin-bottom: 0;
+    }
+
+    input[name="event_search_text"],
+    .duet-date__input {
+        padding: $theme-spacing-three-quarters !important;
+        font-size: 1rem;
+
+        @include from($desktop) {
+            padding: $theme-spacing !important;
+        }
+    }
+
+    button[type="submit"] {
+        .icon {
+            width: $theme-spacing !important;
+            height: $theme-spacing !important;
+        }
+    }
+
+    .events {
+        &__search-form {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 65rem;
+        }
+
+        &__item {
+            color: $black;
+
+            p {
+                line-height: 168%;
+            }
+
+            .h5 {
+                font-weight: $weight-medium;
+                text-transform: none;
+            }
+        }
+
+        &__item-inner {
+            @include from($desktop) {
+                padding-right: $theme-spacing;
+                padding-left: $theme-spacing;
+                border: 1px solid $color-milavida-grey;
+            }
+        }
+
+        &__meta {
+            font-size: 1.25rem;
+            letter-spacing: .06rem;
+        }
+    }
+}
+
+.events {
+    &__item-inner {
+        position: relative;
+
+        * {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../images/milavida_graphic.svg");
+            background-repeat: no-repeat;
+            background-size: 200%;
+            background-position: 101% 50%;
+            opacity: 0.05;
+            z-index: 0;
+        }
+    }
+}

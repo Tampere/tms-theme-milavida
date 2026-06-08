@@ -1,0 +1,46 @@
+.site-header-notice,
+.notice-banner {
+    .notice-banner__content {
+        a {
+            font-weight: $weight-normal !important;
+        }
+    }
+
+    h2 {
+        color: currentColor;
+    }
+
+    &.has-background-primary {
+        background-color: $primary !important;
+
+        &,
+        h2,
+        p,
+        a {
+            color: $primary-invert !important;
+        }
+
+        .icon {
+            fill: $primary-invert !important;
+        }
+    }
+
+    &.has-background-secondary {
+        background-color: $primary-invert !important;
+
+        &,
+        h2,
+        p,
+        a {
+            color: $primary !important;
+        }
+
+        .icon {
+            fill: $primary !important;
+        }
+    }
+}
+
+.notice-banner {
+    border: 1px solid $primary-invert;
+}
